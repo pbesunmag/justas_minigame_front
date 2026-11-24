@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: "Press Start 2P", monospace;
+  --font-retro: "VT323", monospace;
+
+  --color-parchment-dark: #2b2118;
+  --color-parchment: #3d2e22;
+  --color-wood: #5c4033;
+  --color-gold: #d4af37;
+  --color-gold-bright: #f2cf5b;
+  --color-crimson: #b8292f;
+  --color-steel: #3b7dd8;
+  --color-emerald-rpg: #3ca370;
+  --color-ink: #140e0a;
+  --color-cream: #f4e6c8;
+  --color-cream-muted: #c8b698;
+}
+
+@layer base {
+  * {
+    border-radius: 0px !important;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #2b2118;
+    color: #f4e6c8;
+    font-family: "VT323", monospace;
+    font-size: 22px;
+    line-height: 1.3;
+    image-rendering: pixelated;
+  }
+
+  img,
+  svg,
+  canvas {
+    image-rendering: pixelated;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Press Start 2P", monospace;
+  }
+}
+
+.pixel-bg-pattern {
+  background-color: #2b2118;
+  background-image:
+    linear-gradient(90deg, rgba(20, 14, 10, 0.22) 2px, transparent 2px),
+    linear-gradient(rgba(20, 14, 10, 0.22) 2px, transparent 2px);
+  background-size: 24px 24px;
+}
+
+.pixel-text-shadow {
+  text-shadow: 3px 3px 0px #140e0a;
+}
+
+.pixel-text-shadow-sm {
+  text-shadow: 2px 2px 0px #140e0a;
+}
+
+.pixel-input {
+  background-color: #221912;
+  border: 4px solid #5c4033;
+  color: #f4e6c8;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  padding: 0.45rem 0.75rem;
+  outline: none;
+  box-shadow: inset 3px 3px 0px #140e0a;
+  width: 100%;
+}
+
+.pixel-input:focus {
+  border-color: #d4af37;
+  background-color: #1c140e;
+}
+
+.pixel-input::placeholder {
+  color: #8c7860;
+}
